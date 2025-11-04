@@ -1,0 +1,88 @@
+{
+  "name": "Yuriko",
+  "portrait": "assets/village/agents/Yuriko/portrait.png",
+  "coord": [
+    28,
+    65
+  ],
+  "currently": "Yuriko is working on a tax compliance project for a local business. She also attends courses to learn about the latest tax laws. Yuriko is also curious about who will run in the local mayor election next month.",
+  "scratch": {
+    "age": 28,
+    "innate": "Organized, reliable, and detail-oriented",
+    "learned": "Yuriko Yamamoto is a tax lawyer who enjoys helping people navigate the complex world of taxation. She is very organized and detail-oriented.",
+    "lifestyle": "Yuriko Yamamoto goes to bed around 11 p.m., wakes up around 7 a.m., and eats dinner around 6 p.m.",
+    "daily_plan": ""
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Yuriko's house",
+        "Master bedroom"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Yuriko's house": {
+          "Master bedroom": [
+            "closet",
+            "bed",
+            "shelf",
+            "desk",
+            "cooking area",
+            "kitchen sink",
+            "refrigerator"
+          ],
+          "Bathroom": [
+            "bathroom sink",
+            "shower",
+            "toilet"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "behind pharmacy counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        }
+      }
+    }
+  }
+}

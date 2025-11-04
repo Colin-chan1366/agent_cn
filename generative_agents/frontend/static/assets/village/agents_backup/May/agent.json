@@ -1,0 +1,109 @@
+{
+  "name": "May",
+  "portrait": "assets/village/agents/May/portrait.png",
+  "coord": [
+    90,
+    74
+  ],
+  "currently": "May lives with her husband John and son Eddie. She is teaching philosophy courses and writing research papers. She also helps her two children with their homework.",
+  "scratch": {
+    "age": 44,
+    "innate": "nurturing, kind, patient",
+    "learned": "May is a university professor and a mother who enjoys helping people achieve their goals. She is always looking for ways to support her students and family.",
+    "lifestyle": "May goes to bed around 11:00 PM and wakes up around 7:00 AM, and has dinner around 5:00 PM.",
+    "daily_plan": "May starts teaching at Oak Hill College at 10:00 AM and teaches until 2:00 PM, then goes home."
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "林氏 Family's house",
+        "May and John's bedroom"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "林氏 Family's house": {
+          "Bathroom": [
+            "toilet",
+            "shower",
+            "bathroom sink"
+          ],
+          "Common room": [
+            "shelf",
+            "common room table"
+          ],
+          "May and John's bedroom": [
+            "closet",
+            "desk",
+            "bed"
+          ],
+          "Garden": [
+            "residential garden"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "behind pharmacy counter",
+            "pharmacy shelves",
+            "pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Oak Hill College": {
+          "Hallway": [],
+          "Classroom": [
+            "blackboard",
+            "classroom podium",
+            "classroom student seats"
+          ],
+          "Library": [
+            "library sofa",
+            "library table",
+            "bookshelf"
+          ]
+        },
+        "Oak Hill College Dormitory": {
+          "Garden": [
+            "dormitory garden"
+          ]
+        }
+      }
+    }
+  }
+}

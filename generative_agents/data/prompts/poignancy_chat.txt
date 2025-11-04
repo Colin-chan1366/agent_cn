@@ -1,0 +1,17 @@
+${base_desc}
+
+Rate on a scale of 1 to 10, rating principles:
+1 represents extremely ordinary conversations, such as daily morning greetings;
+10 represents extremely special or intense, memorable conversations, such as conversations about breakups, arguments.
+Each conversation can only be represented by an integer from 1 to 10. For example:
+Conversation: Daily morning greetings. Rating: 1
+Conversation: Conversations about breakups, arguments. Rating: 10
+
+The following is a complete conversation that ${agent} needs to rate:
+"""
+${event}
+"""
+Rating: <score>
+
+Fill in <score> based on the complete event.
+Format requirement: Only output 1 number in the range of 1 to 10, do not output any content other than the number.

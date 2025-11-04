@@ -1,0 +1,26 @@
+Task: Convert the input content into subject-verb-object structure.
+Output format: (<subject>, <verb>, <object>)
+
+Examples:
+
+Input: Sam is having breakfast.
+Output: (<Sam>, <having>, <breakfast>)
+
+Input: Junyuan is brewing coffee.
+Output: (<Junyuan>, <brewing>, <coffee>)
+
+Input: Cook is sleeping.
+Output: (<Cook>, <is>, <sleeping>)
+
+Input: Michael is writing an email on the computer.
+Output: (<Michael>, <writing>, <email>)
+
+Input: Peixi is teaching students in the classroom.
+Output: (<Peixi>, <teaching>, <students>)
+
+Input: Mary is running on the treadmill.
+Output: (<Mary>, <is>, <running>)
+
+Based on the examples and the following input, directly output the answer.
+Input: ${action}
+Output:

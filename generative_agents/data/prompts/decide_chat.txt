@@ -1,0 +1,11 @@
+Context:
+"""
+${context}
+
+It is now ${date}. ${chat_history}
+
+${agent_status}
+${another_status}
+"""
+
+Based on the above context, is it possible for ${agent} to actively initiate a conversation with ${another}? Answer only "Yes" or "No":

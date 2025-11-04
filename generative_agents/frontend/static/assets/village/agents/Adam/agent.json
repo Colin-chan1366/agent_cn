@@ -1,0 +1,87 @@
+{
+  "name": "Adam",
+  "portrait": "assets/village/agents/Adam/portrait.png",
+  "coord": [
+    20,
+    65
+  ],
+  "currently": "Adam is writing a book about the importance of creativity and how it shapes the world. He is also curious about who will run in the local mayor election next month.",
+  "scratch": {
+    "age": 36,
+    "innate": "thoughtful, reflective, and wise",
+    "learned": "Adam was a philosopher who enjoyed exploring different perspectives. He always sought to challenge people's preconceived notions.",
+    "lifestyle": "Adam goes to bed around 8 p.m., wakes up around 4 a.m., and eats dinner around 5 p.m.",
+    "daily_plan": ""
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Adam's home",
+        "Master bedroom"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Adam's home": {
+          "Bathroom": [
+            "bathroom sink",
+            "shower",
+            "toilet"
+          ],
+          "Master bedroom": [
+            "closet",
+            "bed",
+            "desk",
+            "cooking area",
+            "kitchen sink",
+            "refrigerator"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "behind pharmacy counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "name": "Hailey",
+  "portrait": "assets/village/agents/Hailey/portrait.png",
+  "coord": [
+    26,
+    32
+  ],
+  "currently": "Hailey is writing a novel about a group of artists living in a co-living space. She also plans to start a podcast.",
+  "scratch": {
+    "age": 30,
+    "innate": "Imaginative, energetic, and resourceful",
+    "learned": "Hailey is a writer who is always looking for new ways to tell stories. She enjoys immersing herself in different cultures and exploring their literature.",
+    "lifestyle": "Hailey went to bed around 2 a.m., woke up around 10 a.m., and had dinner around 6 p.m.",
+    "daily_plan": ""
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Artist Co-living Space",
+        "Hailey's room"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Artist Co-living Space": {
+          "Hailey's room": [
+            "closet",
+            "easel",
+            "desk",
+            "bed"
+          ],
+          "Hailey's bathroom": [
+            "shower",
+            "bathroom sink",
+            "toilet"
+          ],
+          "Kitchen": [
+            "refrigerator",
+            "oven",
+            "kitchen sink",
+            "cooking area"
+          ],
+          "Common room": [
+            "common room table",
+            "common room sofa"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Oak Hill College": {
+          "Hallway": []
+        },
+        "Oak Hill College Dormitory": {
+          "Common room": [
+            "common room sofa",
+            "pool table",
+            "common room table"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "behind pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        }
+      }
+    }
+  }
+}

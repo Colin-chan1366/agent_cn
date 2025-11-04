@@ -1,0 +1,112 @@
+{
+  "name": "Maria",
+  "portrait": "assets/village/agents/Maria/portrait.png",
+  "coord": [
+    123,
+    57
+  ],
+  "currently": "Maria is pursuing a physics degree and streaming games on Twitch to earn extra income. She goes to Hobbs Cafe almost daily to study and eat.",
+  "scratch": {
+    "age": 21,
+    "innate": "energetic, passionate, eager to learn",
+    "learned": "Maria is a physics student at Oak Hill College and a part-time Twitch game streamer who enjoys connecting with others and exploring new ideas.",
+    "lifestyle": "Maria goes to bed around midnight and wakes up around 10:00 AM, and has dinner around 7:00 PM.",
+    "daily_plan": "Maria spends at least 6 hours daily streaming or playing games on Twitch."
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Oak Hill College Dormitory",
+        "Maria's room"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Oak Hill College": {
+          "Hallway": [],
+          "Library": [
+            "library sofa",
+            "library table",
+            "bookshelf"
+          ],
+          "Classroom": [
+            "blackboard",
+            "classroom podium",
+            "classroom student seats"
+          ]
+        },
+        "Oak Hill College Dormitory": {
+          "Garden": [
+            "dormitory garden"
+          ],
+          "Maria's room": [
+            "closet",
+            "desk",
+            "bed",
+            "computer",
+            "blackboard"
+          ],
+          "Women's bathroom": [
+            "toilet",
+            "shower",
+            "bathroom sink"
+          ],
+          "Common room": [
+            "common room sofa",
+            "pool table",
+            "common room table"
+          ],
+          "Men's bathroom": [
+            "shower",
+            "bathroom sink",
+            "toilet"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "behind pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        }
+      }
+    }
+  }
+}

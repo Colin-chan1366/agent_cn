@@ -1,0 +1,6 @@
+Conversation record:
+"""
+${conversation}
+"""
+
+From ${agent}'s perspective, describe in one sentence the most interesting part of the conversation.

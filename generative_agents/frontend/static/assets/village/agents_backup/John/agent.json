@@ -1,0 +1,99 @@
+{
+  "name": "John",
+  "portrait": "assets/village/agents/John/portrait.png",
+  "coord": [
+    91,
+    74
+  ],
+  "currently": "John lives with his wife May and son Eddie, and runs a pharmacy at Willow Market and Pharmacy. He also takes online courses to learn about the latest medications and treatments. John is also curious about who will run in the local mayor election next month, and he asks everyone who will run in the election.",
+  "scratch": {
+    "age": 45,
+    "innate": "patient, kind, organized",
+    "learned": "John is the pharmacy owner at Willow Market and Pharmacy, and he enjoys helping others. He is always looking for ways to make medications more accessible to customers.",
+    "lifestyle": "John goes to bed around 10:00 PM and wakes up around 6:00 AM, and has dinner around 5:00 PM.",
+    "daily_plan": "John goes to Willow Market and Pharmacy around 9:00 AM to open the pharmacy counter. He stands behind the pharmacy counter until 5:00 PM, then goes home."
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "林氏 Family's house",
+        "May and John's bedroom"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "林氏 Family's house": {
+          "May and John's bedroom": [
+            "closet",
+            "desk",
+            "bed"
+          ],
+          "Common room": [
+            "shelf",
+            "common room table"
+          ],
+          "Bathroom": [
+            "toilet",
+            "shower",
+            "bathroom sink"
+          ],
+          "Eddie's bedroom": [
+            "bed",
+            "desk",
+            "closet"
+          ],
+          "Garden": [
+            "residential garden"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "behind pharmacy counter",
+            "pharmacy shelves",
+            "pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Oak Hill College": {
+          "Hallway": []
+        }
+      }
+    }
+  }
+}

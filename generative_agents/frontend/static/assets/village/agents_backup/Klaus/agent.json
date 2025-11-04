@@ -1,0 +1,111 @@
+{
+  "name": "Klaus",
+  "portrait": "assets/village/agents/Klaus/portrait.png",
+  "coord": [
+    126,
+    46
+  ],
+  "currently": "Klaus is writing a research paper on the impact of gentrification in low-income communities.",
+  "scratch": {
+    "age": 20,
+    "innate": "kind, curious, passionate",
+    "learned": "Klaus is a sociology student at Oak Hill College. He is passionate about social justice and enjoys exploring different perspectives.",
+    "lifestyle": "Klaus goes to bed around 11:00 PM and wakes up around 7:00 AM, and has dinner around 5:00 PM.",
+    "daily_plan": "Klaus goes to Oak Hill College Library early in the morning and writes all day, eating at Hobbs Cafe."
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Oak Hill College Dormitory",
+        "Klaus's room"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Oak Hill College": {
+          "Hallway": [],
+          "Library": [
+            "library sofa",
+            "library table",
+            "bookshelf"
+          ],
+          "Classroom": [
+            "blackboard",
+            "classroom podium",
+            "classroom student seats"
+          ]
+        },
+        "Oak Hill College Dormitory": {
+          "Garden": [
+            "dormitory garden"
+          ],
+          "Klaus's room": [
+            "bed",
+            "game console",
+            "closet",
+            "desk"
+          ],
+          "Women's bathroom": [
+            "toilet",
+            "shower",
+            "bathroom sink"
+          ],
+          "Common room": [
+            "common room sofa",
+            "pool table",
+            "common room table"
+          ],
+          "Men's bathroom": [
+            "shower",
+            "bathroom sink",
+            "toilet"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "behind pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        }
+      }
+    }
+  }
+}

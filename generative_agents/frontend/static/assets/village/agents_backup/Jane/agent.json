@@ -1,0 +1,93 @@
+{
+  "name": "Jane",
+  "portrait": "assets/village/agents/Jane/portrait.png",
+  "coord": [
+    72,
+    74
+  ],
+  "currently": "Jane lives with her husband Tom, who is the owner of Willow Market and Pharmacy.",
+  "scratch": {
+    "age": 46,
+    "innate": "friendly, helpful, organized",
+    "learned": "Jane is a housewife who enjoys taking care of her family. She is always looking for new ways to make everyone's life easier and more pleasant.",
+    "lifestyle": "Jane goes to bed around 10:00 PM and wakes up around 6:00 AM, and has dinner around 6:00 PM.",
+    "daily_plan": ""
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Moreno Family House",
+        "Tom and Jane's bedroom"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Moreno Family House": {
+          "Common room": [
+            "shelf",
+            "common room table",
+            "harp"
+          ],
+          "Tom and Jane's bedroom": [
+            "closet",
+            "desk",
+            "bed"
+          ],
+          "Empty bedroom": [
+            "bed",
+            "closet",
+            "guitar"
+          ],
+          "Garden": [
+            "residential garden",
+            "garden seat"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "behind pharmacy counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        }
+      }
+    }
+  }
+}

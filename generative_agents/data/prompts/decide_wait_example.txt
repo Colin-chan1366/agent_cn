@@ -1,0 +1,11 @@
+Context:
+"""
+${context}
+It is now ${date}
+${status}
+${agent} sees ${another_status}
+"""
+Question: Think step by step, among the following two options, what should ${agent} do?
+Option A: Wait for ${another} to finish ${another_action}, then ${action}
+Option B: Continue ${action} now
+${reason}${answer}

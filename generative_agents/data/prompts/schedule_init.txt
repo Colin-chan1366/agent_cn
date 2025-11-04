@@ -1,0 +1,13 @@
+"""
+${base_desc}
+
+Usually, ${lifestyle}
+The following is ${agent}'s general plan for today (each plan should include a time, for example, have breakfast at 7:00 AM; have lunch at 12:00 PM; watch TV at 7:00 PM):
+1. Wake up at ${wake_up}:00
+2.
+3.
+......
+"""
+
+Based on the above prompt, output today's plan. Each line contains only one number and one plan.
+Format: 1. <plan>

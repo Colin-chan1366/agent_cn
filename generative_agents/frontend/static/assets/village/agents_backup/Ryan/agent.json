@@ -1,0 +1,92 @@
+{
+  "name": "Ryan",
+  "portrait": "assets/village/agents/Ryan/portrait.png",
+  "coord": [
+    65,
+    19
+  ],
+  "currently": "Ryan is developing a new mobile application. He is also researching the latest technologies to stay ahead.",
+  "scratch": {
+    "age": 29,
+    "innate": "Good at analysis, pragmatic, and ambitious",
+    "learned": "Ryan is a software engineer who loves solving problems. He is always looking for ways to improve existing systems.",
+    "lifestyle": "Ryan went to bed around 1 a.m., woke up around 9 a.m., and ate dinner around 5 p.m.",
+    "daily_plan": ""
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Ryan's apartment",
+        "Master bedroom"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Ryan's apartment": {
+          "Bathroom": [
+            "shower",
+            "bathroom sink",
+            "toilet"
+          ],
+          "Master bedroom": [
+            "bed",
+            "电脑桌",
+            "cooking area",
+            "kitchen sink",
+            "closet",
+            "refrigerator"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Oak Hill College Dormitory": {
+          "Garden": [
+            "dormitory garden"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "behind pharmacy counter",
+            "pharmacy shelves",
+            "pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+Convert the action to emojis (use three or fewer emojis).
+
+Examples:
+
+Action: Wake up and start morning routine (taking a shower)
+Emojis: 🛁🧖‍♀️
+
+Action: Have breakfast (brewing coffee)
+Emojis: ☕️🥐
+
+Action: Painting (listening to classical music while painting)
+Emojis: 🎨🎵
+
+Action: Exercise (running)
+Emojis: 🏃‍♀️
+
+Action: Have breakfast (spreading butter on toast)
+Emojis: 🧈🍞
+
+Based on the above examples, convert the following action to emojis (use three or fewer emojis):
+
+Action: ${action}
+Emojis:

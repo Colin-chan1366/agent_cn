@@ -1,0 +1,105 @@
+{
+  "name": "Latoya",
+  "portrait": "assets/village/agents/Latoya/portrait.png",
+  "coord": [
+    16,
+    18
+  ],
+  "currently": "Latoya is creating a series of photography works inspired by her travels. She mainly works at the Artist Co-living Space. Latoya is also curious about who will run in the local mayor election next month, which is a core topic of her conversations with others.",
+  "scratch": {
+    "age": 25,
+    "innate": "Organized, logical, and meticulous",
+    "learned": "Latoya is a digital photographer with a keen eye for detail. She is highly organized and analytical when it comes to her art.锐洞察力的数码摄影师。当涉及到她的艺术时，她非常有条理，也有很强的分析能力。",
+    "lifestyle": "Latoya goes to bed around 10 p.m. and wakes up around 6 a.m. She gets up at 5 p.m.",
+    "daily_plan": ""
+  },
+  "spatial": {
+    "address": {
+      "living_area": [
+        "the Ville",
+        "Artist Co-living Space",
+        "Latoya's room"
+      ]
+    },
+    "tree": {
+      "the Ville": {
+        "Artist Co-living Space": {
+          "Latoya's room": [
+            "bed",
+            "desk",
+            "shelf",
+            "closet"
+          ],
+          "Latoya's bathroom": [
+            "shower",
+            "bathroom sink",
+            "toilet"
+          ],
+          "Kitchen": [
+            "refrigerator",
+            "oven",
+            "kitchen sink",
+            "cooking area"
+          ],
+          "Common room": [
+            "common room table",
+            "common room sofa"
+          ]
+        },
+        "Rose Bar": {
+          "Bar": [
+            "shelf",
+            "refrigerator",
+            "bar customer seats",
+            "behind the bar",
+            "kitchen sink",
+            "cooking area",
+            "microphone"
+          ]
+        },
+        "Hobbs Cafe": {
+          "Cafe": [
+            "refrigerator",
+            "cafe customer seats",
+            "cooking area",
+            "kitchen sink",
+            "behind cafe counter",
+            "piano"
+          ]
+        },
+        "Oak Hill College": {
+          "Hallway": []
+        },
+        "Oak Hill College Dormitory": {
+          "Common room": [
+            "common room sofa",
+            "pool table",
+            "common room table"
+          ]
+        },
+        "Willow Market and Pharmacy": {
+          "Store": [
+            "grocery store shelves",
+            "behind grocery counter",
+            "grocery counter",
+            "pharmacy shelves",
+            "pharmacy counter",
+            "behind pharmacy counter"
+          ]
+        },
+        "Harvey Oak Supply Store": {
+          "Supply store": [
+            "supply store product shelves",
+            "behind supply store counter",
+            "supply store counter"
+          ]
+        },
+        "Johnson Park": {
+          "Park": [
+            "park garden"
+          ]
+        }
+      }
+    }
+  }
+}
