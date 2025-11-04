@@ -169,25 +169,8 @@ def parse_llm_output(response, patterns, mode="match_last", ignore_empty=False):
     if isinstance(patterns, str):
         patterns = [patterns]
     rets = []
-    
-    # 添加：尝试解析新格式 "1. Activity at 7:00 AM"
     for line in response.split("\n"):
         line = line.replace("**", "").strip()
-        
-        # 新增：如果是数字列表格式，尝试转换
-        if re.match(r'^\d+\.', line):
-            # 提取时间 (匹配 "7:00 AM" 或 "12:00 PM")
-            time_match = re.search(r'at (\d{1,2}:\d{2})', line)
-            if time_match:
-                time_str = time_match.group(1)
-                # 提取活动描述
-                activity = re.sub(r'^\d+\.\s*', '', line)  # 移除序号
-                activity = re.sub(r'\s*-\s*(Morning|Afternoon|Evening|Night|Noon|Midday).*$', '', activity)  # 移除时间段描述
-                # 转换为期望格式
-                converted_line = f"[{time_str}] Aisha {activity.lower()}."
-                line = converted_line
-        
-        # 原有的匹配逻辑
         for pattern in patterns:
             if pattern:
                 matchs = re.findall(pattern, line)
@@ -196,25 +179,8 @@ def parse_llm_output(response, patterns, mode="match_last", ignore_empty=False):
             if len(matchs) >= 1:
                 rets.append(matchs[0])
                 break
-    
-    # 调试信息（保持不变）
-    if not ignore_empty and not rets:
-        print("="*80)
-        print("DEBUG - Failed to parse LLM output")
-        print("="*80)
-        print(f"Raw Response:\n{response}\n")
-        print(f"Patterns: {patterns}\n")
-        print(f"Mode: {mode}")
-        print("-"*80)
-        print("Processed lines:")
-        for i, line in enumerate(response.split("\n")):
-            cleaned_line = line.replace("**", "").strip()
-            print(f"  Line {i}: '{cleaned_line}'")
-        print("="*80)
-    
     if not ignore_empty:
         assert rets, "Failed to match llm output"
-    
     if mode == "match_first":
         return rets[0]
     if mode == "match_last":

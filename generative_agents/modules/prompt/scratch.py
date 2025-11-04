@@ -53,8 +53,8 @@ class Scratch:
 
         def _callback(response):
             pattern = [
-                "Rating[:: ]+(\d{1,2})",
-                "(\d{1,2})",
+                r"Rating[:: ]+(\d{1,2})",
+                r"(\d{1,2})",
             ]
             return int(parse_llm_output(response, pattern, "match_last"))
 
@@ -76,8 +76,8 @@ class Scratch:
 
         def _callback(response):
             pattern = [
-                "Rating[:: ]+(\d{1,2})",
-                "(\d{1,2})",
+                r"Rating[:: ]+(\d{1,2})",
+                r"(\d{1,2})",
             ]
             return int(parse_llm_output(response, pattern, "match_last"))
 
@@ -99,9 +99,9 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                "(\d{1,2}):00",
-                "(\d{1,2})",
-                "\d{1,2}",
+                r"(\d{1,2}):00",
+                r"(\d{1,2})",
+                r"\d{1,2}",
             ]
             wake_up_time = int(parse_llm_output(response, patterns))
             if wake_up_time > 11:
@@ -123,11 +123,11 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                "\d{1,2}\. (.*)\.",
-                "\d{1,2}\. (.*)",
-                "\d{1,2}\) (.*)\.",
-                "\d{1,2}\) (.*)",
-                "(.*)\.",
+                r"\d{1,2}\. (.*)\.",
+                r"\d{1,2}\. (.*)",
+                r"\d{1,2}\) (.*)\.",
+                r"\d{1,2}\) (.*)",
+                r"(.*)\.",
                 "(.*)",
             ]
             return parse_llm_output(response, patterns, mode="match_all")
@@ -183,10 +183,10 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                "\[(\d{1,2}:\d{2})\] " + self.name + "(.*)\.",
-                "\[(\d{1,2}:\d{2})\] " + self.name + "(.*)",
-                "\[(\d{1,2}:\d{2})\] " + "(.*)\.",
-                "\[(\d{1,2}:\d{2})\] " + "(.*)",
+                r"\[(\d{1,2}:\d{2})\] " + self.name + r"(.*)\.",
+                r"\[(\d{1,2}:\d{2})\] " + self.name + "(.*)",
+                r"\[(\d{1,2}:\d{2})\] " + r"(.*)\.",
+                r"\[(\d{1,2}:\d{2})\] " + "(.*)",
             ]
             outputs = parse_llm_output(response, patterns, mode="match_all")
             assert len(outputs) >= 5, "less than 5 schedules"
@@ -219,11 +219,20 @@ class Scratch:
         )
 
         def _callback(response):
+            # 更灵活的匹配模式
             patterns = [
-                "\d{1,2}\) .*\*planned\* (.*)[\(\(]+duration[:: ]+(\d{1,2})[,,\ ]+remaining[:: ]+\d*[\)\)]",
+                # 原格式: 1) Aisha *planned* to do X (duration: 15, remaining: 45)
+                r"\d{1,2}\) .*\*planned\* (.*)[\(\(]+duration[:: ]+(\d{1,2})[,,\ ]+remaining[:: ]+\d*[\)\)]",
+                # 新格式: 1. Activity (duration: 15 minutes, remaining: 45 minutes)
+                r"\d{1,2}[\.\)] (.+?) \(duration: (\d{1,2})",
+                # 备用格式: 1. Activity (15 min)
+                r"\d{1,2}[\.\)] (.+?) \((\d{1,2}) min",
             ]
-            schedules = parse_llm_output(response, patterns, mode="match_all")
-            schedules = [(s[0].strip("."), int(s[1])) for s in schedules]
+            schedules = parse_llm_output(response, patterns, mode="match_all", ignore_empty=True)
+            if not schedules:
+                # 如果都没匹配到，使用 failsafe
+                return failsafe
+            schedules = [(s[0].strip(".").strip(), int(s[1])) for s in schedules]
             left = plan["duration"] - sum([s[1] for s in schedules])
             if left > 0:
                 schedules.append((plan["describe"], left))
@@ -277,9 +286,9 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                "^\[(\d{1,2}:\d{1,2}) ?- ?(\d{1,2}:\d{1,2})\] (.*)",
-                "^\[(\d{1,2}:\d{1,2}) ?~ ?(\d{1,2}:\d{1,2})\] (.*)",
-                "^\[(\d{1,2}:\d{1,2}) ?to ?(\d{1,2}:\d{1,2})\] (.*)",
+                r"^\[(\d{1,2}:\d{1,2}) ?- ?(\d{1,2}:\d{1,2})\] (.*)",
+                r"^\[(\d{1,2}:\d{1,2}) ?~ ?(\d{1,2}:\d{1,2})\] (.*)",
+                r"^\[(\d{1,2}:\d{1,2}) ?to ?(\d{1,2}:\d{1,2})\] (.*)",
             ]
             schedules = parse_llm_output(response, patterns, mode="match_all")
             decompose = []
@@ -327,9 +336,9 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                ".*should go to[:: ]*(.*)\.",
+                r".*should go to[:: ]*(.*)\.",
                 ".*should go to[:: ]*(.*)",
-                "(.+)\.",
+                r"(.+)\.",
                 "(.+)",
             ]
             sector = parse_llm_output(response, patterns)
@@ -362,9 +371,9 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                ".*should go to[:: ]*(.*)\.",
+                r".*should go to[:: ]*(.*)\.",
                 ".*should go to[:: ]*(.*)",
-                "(.+)\.",
+                r"(.+)\.",
                 "(.+)",
             ]
             arena = parse_llm_output(response, patterns)
@@ -388,9 +397,9 @@ class Scratch:
         def _callback(response):
             # pattern = ["The most relevant object from the Objects is: <(.+?)>", "<(.+?)>"]
             patterns = [
-                ".*is[:: ]*(.*)\.",
+                r".*is[:: ]*(.*)\.",
                 ".*is[:: ]*(.*)",
-                "(.+)\.",
+                r"(.+)\.",
                 "(.+)",
             ]
             obj = parse_llm_output(response, patterns)
@@ -408,16 +417,16 @@ class Scratch:
 
         def _callback(response):
             # 正则表达式：匹配大多数emoji
-            emoji_pattern = u"([\U0001F600-\U0001F64F]|"   # 表情符号
-            emoji_pattern += u"[\U0001F300-\U0001F5FF]|"   # 符号和图标
-            emoji_pattern += u"[\U0001F680-\U0001F6FF]|"   # 运输和地图符号
-            emoji_pattern += u"[\U0001F700-\U0001F77F]|"   # 午夜符号
-            emoji_pattern += u"[\U0001F780-\U0001F7FF]|"   # 英镑符号
-            emoji_pattern += u"[\U0001F800-\U0001F8FF]|"   # 合成扩展
-            emoji_pattern += u"[\U0001F900-\U0001F9FF]|"   # 补充符号和图标
-            emoji_pattern += u"[\U0001FA00-\U0001FA6F]|"   # 补充符号和图标
-            emoji_pattern += u"[\U0001FA70-\U0001FAFF]|"   # 补充符号和图标
-            emoji_pattern += u"[\U00002702-\U000027B0]+)"  # 杂项符号
+            emoji_pattern = r"([\U0001F600-\U0001F64F]|"   # 表情符号
+            emoji_pattern += r"[\U0001F300-\U0001F5FF]|"   # 符号和图标
+            emoji_pattern += r"[\U0001F680-\U0001F6FF]|"   # 运输和地图符号
+            emoji_pattern += r"[\U0001F700-\U0001F77F]|"   # 午夜符号
+            emoji_pattern += r"[\U0001F780-\U0001F7FF]|"   # 英镑符号
+            emoji_pattern += r"[\U0001F800-\U0001F8FF]|"   # 合成扩展
+            emoji_pattern += r"[\U0001F900-\U0001F9FF]|"   # 补充符号和图标
+            emoji_pattern += r"[\U0001FA00-\U0001FA6F]|"   # 补充符号和图标
+            emoji_pattern += r"[\U0001FA70-\U0001FAFF]|"   # 补充符号和图标
+            emoji_pattern += r"[\U00002702-\U000027B0]+)"  # 杂项符号
 
             emoji = re.compile(emoji_pattern, flags=re.UNICODE).findall(response)
             if len(emoji) > 0:
@@ -453,8 +462,8 @@ class Scratch:
                     continue
 
                 patterns = [
-                    "[\(\(]<(.+?)>[,,\ ]+<(.+?)>[,,\ ]+<(.*)>[\)\)]",
-                    "[\(\(](.+?)[,,\ ]+(.+?)[,,\ ]+(.*)[\)\)]",
+                    r"[\(\(]<(.+?)>[,,\ ]+<(.+?)>[,,\ ]+<(.*)>[\)\)]",
+                    r"[\(\(](.+?)[,,\ ]+(.+?)[,,\ ]+(.*)[\)\)]",
                 ]
                 outputs = parse_llm_output(response, patterns)
                 if len(outputs) == 3:
@@ -476,7 +485,7 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                "<" + obj + "> ?" + "(.*)\.",
+                "<" + obj + "> ?" + r"(.*)\.",
                 "<" + obj + "> ?" + "(.*)",
             ]
             return parse_llm_output(response, patterns)
@@ -751,7 +760,7 @@ class Scratch:
         )
 
         def _callback(response):
-            pattern = ["^\d{1}\. (.*)", "^\d{1}\) (.*)", "^\d{1} (.*)"]
+            pattern = [r"^\d{1}\. (.*)", r"^\d{1}\) (.*)", r"^\d{1} (.*)"]
             return parse_llm_output(response, pattern, mode="match_all")
 
         return {
@@ -775,8 +784,8 @@ class Scratch:
 
         def _callback(response):
             patterns = [
-                "^\d{1}[\. ]+(.*)[\. ]*[\(\(]+.*number[:: ]+([\d,,\ ]+)[\)\)]",
-                "^\d{1}[\. ]+(.*)[\. ]*[\(\(]([\d,,\ ]+)[\)\)]",
+                r"^\d{1}[\. ]+(.*)[\. ]*[\(\(]+.*number[:: ]+([\d,,\ ]+)[\)\)]",
+                r"^\d{1}[\. ]+(.*)[\. ]*[\(\(]([\d,,\ ]+)[\)\)]",
             ]
             insights, outputs = [], parse_llm_output(
                 response, patterns, mode="match_all"
@@ -861,10 +870,10 @@ class Scratch:
 
         def _callback(response):
             pattern = [
-                "^\d{1,2}\. (.*)\.",
-                "^\d{1,2}\. (.*)",
-                "^\d{1,2}\) (.*)\.",
-                "^\d{1,2}\) (.*)",
+                r"^\d{1,2}\. (.*)\.",
+                r"^\d{1,2}\. (.*)",
+                r"^\d{1,2}\) (.*)\.",
+                r"^\d{1,2}\) (.*)",
             ]
             return parse_llm_output(response, pattern, mode="match_all")
 
@@ -915,7 +924,7 @@ class Scratch:
 
         def _callback(response):
             pattern = [
-                "^Status: (.*)\.",
+                r"^Status: (.*)\.",
                 "^Status: (.*)",
             ]
             return parse_llm_output(response, pattern)

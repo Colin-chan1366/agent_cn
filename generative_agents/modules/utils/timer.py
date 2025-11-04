@@ -53,29 +53,22 @@ class Timer:
     def daily_format(self):
         return self.get_date("%A %B %d")
 
-    def get_weekday(self, t):
-        weekday_dict = {
-            0: "星期一",
-            1: "星期二",
-            2: "星期三",
-            3: "星期四",
-            4: "星期五",
-            5: "星期六",
-            6: "星期日"
-        }
-        weekday = weekday_dict[t.weekday()]
-        return weekday
+    def get_weekday(self, t=None):
+        if t is None:
+            t = self.curr_time
+        weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+        return weekdays[t.weekday()]
 
     def daily_format_cn(self):
         weekday = self.get_weekday(self.get_date())
-        date = self.get_date("%Y年%m月%d日")
-        return f"{date}（{weekday}）"
+        date = self.get_date("%Y-%m-%d")
+        return f"{date} ({weekday})"
 
-    def time_format_cn(self, t):
+    def time_format(self, t):
         weekday = self.get_weekday(t)
-        date = t.strftime("%Y年%m月%d日")
+        date = t.strftime("%Y-%m-%d")
         time = t.strftime("%H:%M")
-        return f"{date}（{weekday}）{time}"
+        return f"{date} ({weekday}) {time}"
 
     def daily_duration(self, mode="minute"):
         return daily_duration(self.get_date(), mode)

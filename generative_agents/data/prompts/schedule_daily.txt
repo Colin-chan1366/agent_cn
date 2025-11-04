@@ -3,8 +3,24 @@ ${base_desc}
 The following is the hourly breakdown of ${agent}'s schedule for today:
 ${daily_schedule}
 
-Please refer to the above character information and schedule details, generate an hourly plan (24-hour format), only fill in the <activity> content, do not skip any time point.
-The hourly plan must follow the format below:
+CRITICAL: You MUST output in this EXACT format below. Each line MUST follow this pattern:
+[H:MM] ${agent} does something.
+
+CORRECT format examples:
+[6:00] ${agent} wakes up and completes morning routine.
+[7:00] ${agent} has breakfast.
+[8:00] ${agent} studies for thesis.
+[12:00] ${agent} has lunch.
+[18:00] ${agent} has dinner.
+
+INCORRECT formats (DO NOT USE):
+❌ "1. Wake up at 7:00 AM"
+❌ "- 6:00: Wake up"
+❌ "6:00 to 7:00: Breakfast"
+
+You MUST output at least 5 activities in the format: [H:MM] ${agent} activity.
+
+The hourly plan template is:
 """
 ${hourly_schedule}
 """

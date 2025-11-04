@@ -1,0 +1,826 @@
+{
+  "stride": 60,
+  "time": "20250213-09:30",
+  "maze": {
+    "path": "assets/village/maze.json"
+  },
+  "agent_base": {
+    "percept": {
+      "mode": "box",
+      "vision_r": 8,
+      "att_bandwidth": 8
+    },
+    "schedule": {
+      "max_try": 5,
+      "diversity": 5
+    },
+    "think": {
+      "llm": {
+        "provider": "ollama",
+        "model": "qwen3:8b-q4_K_M",
+        "base_url": "http://127.0.0.1:11434/v1",
+        "api_key": ""
+      },
+      "interval": 1000,
+      "poignancy_max": 150
+    },
+    "chat_iter": 4,
+    "associate": {
+      "embedding": {
+        "provider": "ollama",
+        "model": "bge-m3:latest",
+        "base_url": "http://127.0.0.1:11434",
+        "api_key": ""
+      },
+      "retention": 8
+    }
+  },
+  "agents": {
+    "Aisha": {
+      "config_path": "assets/village/agents/Aisha/agent.json",
+      "status": {
+        "poignancy": 0
+      },
+      "schedule": {
+        "create": "20250213-09:30:00",
+        "daily_schedule": [
+          {
+            "idx": 0,
+            "describe": "sleeping",
+            "start": 0,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 1,
+            "describe": "sleeping",
+            "start": 60,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 2,
+            "describe": " studies writing techniques",
+            "start": 120,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 3,
+            "describe": "sleeping",
+            "start": 180,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 4,
+            "describe": "sleeping",
+            "start": 240,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 5,
+            "describe": " has dinner",
+            "start": 300,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 6,
+            "describe": " reads literary analysis",
+            "start": 360,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 7,
+            "describe": " watches TV",
+            "start": 420,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 8,
+            "describe": " studies Shakespeare's language research",
+            "start": 480,
+            "duration": 120,
+            "decompose": [
+              {
+                "idx": 0,
+                "describe": " studies Shakespeare's language research",
+                "start": 480,
+                "duration": 10
+              },
+              {
+                "idx": 1,
+                "describe": " studies Shakespeare's language research",
+                "start": 490,
+                "duration": 10
+              },
+              {
+                "idx": 2,
+                "describe": " studies Shakespeare's language research",
+                "start": 500,
+                "duration": 10
+              },
+              {
+                "idx": 3,
+                "describe": " studies Shakespeare's language research",
+                "start": 510,
+                "duration": 10
+              },
+              {
+                "idx": 4,
+                "describe": " studies Shakespeare's language research",
+                "start": 520,
+                "duration": 10
+              },
+              {
+                "idx": 5,
+                "describe": " studies Shakespeare's language research",
+                "start": 530,
+                "duration": 10
+              },
+              {
+                "idx": 6,
+                "describe": " studies Shakespeare's language research",
+                "start": 540,
+                "duration": 10
+              },
+              {
+                "idx": 7,
+                "describe": " studies Shakespeare's language research",
+                "start": 550,
+                "duration": 10
+              },
+              {
+                "idx": 8,
+                "describe": " studies Shakespeare's language research",
+                "start": 560,
+                "duration": 10
+              },
+              {
+                "idx": 9,
+                "describe": " studies Shakespeare's language research",
+                "start": 570,
+                "duration": 10
+              },
+              {
+                "idx": 10,
+                "describe": " studies Shakespeare's language research",
+                "start": 580,
+                "duration": 10
+              },
+              {
+                "idx": 11,
+                "describe": " studies Shakespeare's language research",
+                "start": 590,
+                "duration": 10
+              }
+            ]
+          },
+          {
+            "idx": 9,
+            "describe": " goes to bed",
+            "start": 600,
+            "duration": 840,
+            "decompose": {}
+          }
+        ]
+      },
+      "associate": {
+        "memory": {
+          "event": [],
+          "thought": [
+            "node_0"
+          ],
+          "chat": []
+        }
+      },
+      "chats": [],
+      "currently": "Aisha is researching for her graduation thesis on the use of language in Shakespeare's plays. She is also attending classes to learn more about writing.",
+      "action": {
+        "event": {
+          "subject": "Aisha",
+          "predicate": "is",
+          "object": " studies Shakespeare's language research",
+          "describe": " studies Shakespeare's language research",
+          "address": [
+            "the Ville",
+            "Oak Hill College",
+            "Library",
+            "bookshelf"
+          ],
+          "emoji": " studies Shakespeare's language research"
+        },
+        "obj_event": {
+          "subject": "bookshelf",
+          "predicate": "is",
+          "object": "is holding books on Shakespeare's language research",
+          "describe": "is holding books on Shakespeare's language research",
+          "address": [
+            "the Ville",
+            "Oak Hill College",
+            "Library",
+            "bookshelf"
+          ],
+          "emoji": ""
+        },
+        "start": "20250213-09:30:00",
+        "duration": 10
+      },
+      "coord": [
+        123,
+        26
+      ]
+    },
+    "Abigail": {
+      "config_path": "assets/village/agents/Abigail/agent.json",
+      "status": {
+        "poignancy": 0
+      },
+      "schedule": {
+        "create": "20250213-09:30:00",
+        "daily_schedule": [
+          {
+            "idx": 0,
+            "describe": "sleeping",
+            "start": 0,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 1,
+            "describe": "sleeping",
+            "start": 60,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 2,
+            "describe": "sleeping",
+            "start": 120,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 3,
+            "describe": "sleeping",
+            "start": 180,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 4,
+            "describe": "sleeping",
+            "start": 240,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 5,
+            "describe": "sleeping",
+            "start": 300,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 6,
+            "describe": "sleeping",
+            "start": 360,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 7,
+            "describe": "sleeping",
+            "start": 420,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 8,
+            "describe": " wakes up",
+            "start": 480,
+            "duration": 30,
+            "decompose": {}
+          },
+          {
+            "idx": 9,
+            "describe": " has breakfast",
+            "start": 510,
+            "duration": 30,
+            "decompose": {}
+          },
+          {
+            "idx": 10,
+            "describe": " works on animation project",
+            "start": 540,
+            "duration": 240,
+            "decompose": [
+              {
+                "idx": 0,
+                "describe": " works on animation project",
+                "start": 540,
+                "duration": 10
+              },
+              {
+                "idx": 1,
+                "describe": " works on animation project",
+                "start": 550,
+                "duration": 10
+              },
+              {
+                "idx": 2,
+                "describe": " works on animation project",
+                "start": 560,
+                "duration": 10
+              },
+              {
+                "idx": 3,
+                "describe": " works on animation project",
+                "start": 570,
+                "duration": 10
+              },
+              {
+                "idx": 4,
+                "describe": " works on animation project",
+                "start": 580,
+                "duration": 10
+              },
+              {
+                "idx": 5,
+                "describe": " works on animation project",
+                "start": 590,
+                "duration": 10
+              },
+              {
+                "idx": 6,
+                "describe": " works on animation project",
+                "start": 600,
+                "duration": 10
+              },
+              {
+                "idx": 7,
+                "describe": " works on animation project",
+                "start": 610,
+                "duration": 10
+              },
+              {
+                "idx": 8,
+                "describe": " works on animation project",
+                "start": 620,
+                "duration": 10
+              },
+              {
+                "idx": 9,
+                "describe": " works on animation project",
+                "start": 630,
+                "duration": 10
+              },
+              {
+                "idx": 10,
+                "describe": " works on animation project",
+                "start": 640,
+                "duration": 10
+              },
+              {
+                "idx": 11,
+                "describe": " works on animation project",
+                "start": 650,
+                "duration": 10
+              },
+              {
+                "idx": 12,
+                "describe": " works on animation project",
+                "start": 660,
+                "duration": 10
+              },
+              {
+                "idx": 13,
+                "describe": " works on animation project",
+                "start": 670,
+                "duration": 10
+              },
+              {
+                "idx": 14,
+                "describe": " works on animation project",
+                "start": 680,
+                "duration": 10
+              },
+              {
+                "idx": 15,
+                "describe": " works on animation project",
+                "start": 690,
+                "duration": 10
+              },
+              {
+                "idx": 16,
+                "describe": " works on animation project",
+                "start": 700,
+                "duration": 10
+              },
+              {
+                "idx": 17,
+                "describe": " works on animation project",
+                "start": 710,
+                "duration": 10
+              },
+              {
+                "idx": 18,
+                "describe": " works on animation project",
+                "start": 720,
+                "duration": 10
+              },
+              {
+                "idx": 19,
+                "describe": " works on animation project",
+                "start": 730,
+                "duration": 10
+              },
+              {
+                "idx": 20,
+                "describe": " works on animation project",
+                "start": 740,
+                "duration": 10
+              },
+              {
+                "idx": 21,
+                "describe": " works on animation project",
+                "start": 750,
+                "duration": 10
+              },
+              {
+                "idx": 22,
+                "describe": " works on animation project",
+                "start": 760,
+                "duration": 10
+              },
+              {
+                "idx": 23,
+                "describe": " works on animation project",
+                "start": 770,
+                "duration": 10
+              }
+            ]
+          },
+          {
+            "idx": 11,
+            "describe": " has lunch",
+            "start": 780,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 12,
+            "describe": " continues working on the project",
+            "start": 840,
+            "duration": 240,
+            "decompose": {}
+          },
+          {
+            "idx": 13,
+            "describe": " has dinner",
+            "start": 1080,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 14,
+            "describe": " experiments with new tools and techniques",
+            "start": 1140,
+            "duration": 90,
+            "decompose": {}
+          },
+          {
+            "idx": 15,
+            "describe": " relaxes and watches TV",
+            "start": 1230,
+            "duration": 180,
+            "decompose": {}
+          },
+          {
+            "idx": 16,
+            "describe": " goes to bed",
+            "start": 1410,
+            "duration": 30,
+            "decompose": {}
+          }
+        ]
+      },
+      "associate": {
+        "memory": {
+          "event": [],
+          "thought": [
+            "node_0"
+          ],
+          "chat": []
+        }
+      },
+      "chats": [],
+      "currently": "Abigail is working on an animation project for a client. She is also experimenting with different tools and techniques to create interactive art.",
+      "action": {
+        "event": {
+          "subject": "Abigail",
+          "predicate": "is",
+          "object": " works on animation project",
+          "describe": " works on animation project",
+          "address": [
+            "the Ville",
+            "Artist Co-living Space",
+            "Abigail's room",
+            "desk"
+          ],
+          "emoji": " works on animation project"
+        },
+        "obj_event": {
+          "subject": "desk",
+          "predicate": "is",
+          "object": "is cluttered with animation project materials",
+          "describe": "is cluttered with animation project materials",
+          "address": [
+            "the Ville",
+            "Artist Co-living Space",
+            "Abigail's room",
+            "desk"
+          ],
+          "emoji": ""
+        },
+        "start": "20250213-09:30:00",
+        "duration": 10
+      },
+      "coord": [
+        36,
+        22
+      ]
+    },
+    "Adam": {
+      "config_path": "assets/village/agents/Adam/agent.json",
+      "status": {
+        "poignancy": 0
+      },
+      "schedule": {
+        "create": "20250213-09:30:00",
+        "daily_schedule": [
+          {
+            "idx": 0,
+            "describe": "sleeping",
+            "start": 0,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 1,
+            "describe": "sleeping",
+            "start": 60,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 2,
+            "describe": "sleeping",
+            "start": 120,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 3,
+            "describe": "sleeping",
+            "start": 180,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 4,
+            "describe": " wakes up",
+            "start": 240,
+            "duration": 30,
+            "decompose": {}
+          },
+          {
+            "idx": 5,
+            "describe": " writes on the book",
+            "start": 270,
+            "duration": 120,
+            "decompose": {}
+          },
+          {
+            "idx": 6,
+            "describe": " has breakfast",
+            "start": 390,
+            "duration": 30,
+            "decompose": {}
+          },
+          {
+            "idx": 7,
+            "describe": " researches mayor election candidates",
+            "start": 420,
+            "duration": 90,
+            "decompose": {}
+          },
+          {
+            "idx": 8,
+            "describe": " does light exercise or walks",
+            "start": 510,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 9,
+            "describe": " reflects on creativity's role in the world",
+            "start": 570,
+            "duration": 150,
+            "decompose": [
+              {
+                "idx": 0,
+                "describe": " reflects on creativity's role in the world",
+                "start": 570,
+                "duration": 10
+              },
+              {
+                "idx": 1,
+                "describe": " reflects on creativity's role in the world",
+                "start": 580,
+                "duration": 10
+              },
+              {
+                "idx": 2,
+                "describe": " reflects on creativity's role in the world",
+                "start": 590,
+                "duration": 10
+              },
+              {
+                "idx": 3,
+                "describe": " reflects on creativity's role in the world",
+                "start": 600,
+                "duration": 10
+              },
+              {
+                "idx": 4,
+                "describe": " reflects on creativity's role in the world",
+                "start": 610,
+                "duration": 10
+              },
+              {
+                "idx": 5,
+                "describe": " reflects on creativity's role in the world",
+                "start": 620,
+                "duration": 10
+              },
+              {
+                "idx": 6,
+                "describe": " reflects on creativity's role in the world",
+                "start": 630,
+                "duration": 10
+              },
+              {
+                "idx": 7,
+                "describe": " reflects on creativity's role in the world",
+                "start": 640,
+                "duration": 10
+              },
+              {
+                "idx": 8,
+                "describe": " reflects on creativity's role in the world",
+                "start": 650,
+                "duration": 10
+              },
+              {
+                "idx": 9,
+                "describe": " reflects on creativity's role in the world",
+                "start": 660,
+                "duration": 10
+              },
+              {
+                "idx": 10,
+                "describe": " reflects on creativity's role in the world",
+                "start": 670,
+                "duration": 10
+              },
+              {
+                "idx": 11,
+                "describe": " reflects on creativity's role in the world",
+                "start": 680,
+                "duration": 10
+              },
+              {
+                "idx": 12,
+                "describe": " reflects on creativity's role in the world",
+                "start": 690,
+                "duration": 10
+              },
+              {
+                "idx": 13,
+                "describe": " reflects on creativity's role in the world",
+                "start": 700,
+                "duration": 10
+              },
+              {
+                "idx": 14,
+                "describe": " reflects on creativity's role in the world",
+                "start": 710,
+                "duration": 10
+              }
+            ]
+          },
+          {
+            "idx": 10,
+            "describe": " has lunch",
+            "start": 720,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 11,
+            "describe": " reads philosophy or creativity-related articles",
+            "start": 780,
+            "duration": 90,
+            "decompose": {}
+          },
+          {
+            "idx": 12,
+            "describe": " takes a short nap",
+            "start": 870,
+            "duration": 60,
+            "decompose": {}
+          },
+          {
+            "idx": 13,
+            "describe": " continues writing on the book",
+            "start": 930,
+            "duration": 150,
+            "decompose": {}
+          },
+          {
+            "idx": 14,
+            "describe": " has dinner",
+            "start": 1080,
+            "duration": 30,
+            "decompose": {}
+          },
+          {
+            "idx": 15,
+            "describe": " engages in contemplation or journaling",
+            "start": 1110,
+            "duration": 90,
+            "decompose": {}
+          },
+          {
+            "idx": 16,
+            "describe": " goes to bed",
+            "start": 1200,
+            "duration": 240,
+            "decompose": {}
+          }
+        ]
+      },
+      "associate": {
+        "memory": {
+          "event": [],
+          "thought": [
+            "node_0"
+          ],
+          "chat": []
+        }
+      },
+      "chats": [],
+      "currently": "Adam is writing a book about the importance of creativity and how it shapes the world. He is also curious about who will run in the local mayor election next month.",
+      "action": {
+        "event": {
+          "subject": "Adam",
+          "predicate": "is",
+          "object": " reflects on creativity's role in the world",
+          "describe": " reflects on creativity's role in the world",
+          "address": [
+            "the Ville",
+            "Adam's home",
+            "Master bedroom",
+            "desk"
+          ],
+          "emoji": " reflects on creativity's role in the world"
+        },
+        "obj_event": {
+          "subject": "desk",
+          "predicate": "is",
+          "object": "is used for reflection",
+          "describe": "is used for reflection",
+          "address": [
+            "the Ville",
+            "Adam's home",
+            "Master bedroom",
+            "desk"
+          ],
+          "emoji": ""
+        },
+        "start": "20250213-09:30:00",
+        "duration": 10
+      },
+      "coord": [
+        21,
+        62
+      ]
+    }
+  },
+  "step": 1
+}
